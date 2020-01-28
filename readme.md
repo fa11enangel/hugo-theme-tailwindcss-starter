@@ -1,5 +1,8 @@
 # Hugo Starter Theme with Tailwindcss
 
+This is a fork from
+[dirkolbrich/hugo-theme-tailwindcss-starer](https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter) with some changes which were important for me.
+
 Starter files for a Hugo theme with Tailwindcss.
 
 - set up to use [Tailwindcss](https://tailwindcss.com) - v1.1.4
