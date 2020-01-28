@@ -9,22 +9,27 @@ class TailwindExtractor {
 }
 
 const themeDir = __dirname + '/../../';
+const projectDir = __dirname + '/../../../../';
 
-module.exports = {    
-    plugins: [        
+module.exports = {
+    plugins: [
         require('postcss-import')({
             path: [themeDir]
-            }), 
-        require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),   
+            }),
+        require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
         require('@fullhuman/postcss-purgecss')({
-            content: [themeDir + 'layouts/**/*.html'],
+            content: [
+                themeDir + 'layouts/**/*.html',
+                projectDir + 'layouts/**/*.html',
+                projectDir + 'content/**/*.html',
+            ],
             extractors: [
             {
                 extractor: TailwindExtractor,
                 extensions: ['html']
-            }], 
+            }],
             fontFace: true
-        }),    
+        }),
         require('autoprefixer')({
             grid: true
         }),
